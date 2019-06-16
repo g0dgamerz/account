@@ -1,0 +1,115 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="{%static 'style.css' %}">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <title></title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light shadow-sm mb-5">
+      <a href="#" class="navbar-left"></a>
+      <button class="navbar-toggler" type="button" data-toggle = "collapse" data-target = "#navbarSupportedContent" aria-controls = "navbarSupportedContent" aria-expanded = "true" aria-label = "Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class=" collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav site-menu col-4 offset-4 pl-5">
+          <li class="nav-item active">
+            <a href="{% url 'home' %}" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="{% url 'journal' %}" class="nav-link">Journal</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">Stock</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">Ladger</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">Bill</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">Preview</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+      <!----------------Cards------------>
+    <div class="container body-container mt-5">
+    {% block content%}
+    
+    	<div class="jumbotron" style="background-color: white;">
+  		  <h1 class="display-4 text-center">Welcome to Account system!</h1>
+  		  </p>
+		  </div>
+      {% endblock content%}
+    </div>
+
+
+ 
+
+
+ 	<footer class="bg-light footerpart">
+ 		<div class="container">
+	        <div class="row ">
+	          <div class="col-lg-4 mt-3">
+	            <div class="mb-5">
+	              <h4 class="footer-heading mb-4">About Account</h4>
+	              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero atque, consequatur id ratione, et non dignissimos culpa? Ut veritatis, quos illum totam quis blanditiis, minima minus odio!</p>
+	            </div>
+	          </div>
+	          <div class="col-lg-4  mb-lg-0">
+	            <div class="row mb-5 mt-3 navigation_part ">
+	              <div class="col-md-12">
+	                <h4 class="footer-heading mb-4">Navigations</h4>
+	              </div>
+	              <div class="col-md-6 col-lg-6">
+	                <ul class="list-unstyled linkfooter">
+	                  <li><a href="{% url 'home' %}">Home</a></li>
+	                  <li><a href="{% url 'journal' %}">Journal</a></li>
+	                  <li><a href="">Ledger</a></li>
+	                  <li><a href="">Bill</a></li>
+	                  <li><a href="">Stock</a></li>
+	                </ul>
+	              </div>
+	            </div>
+	          </div>
+	          <div class="col-lg-4  mb-lg-0 mt-3">
+	            <div class="mb-5">
+	              <h4 class="footer-heading mb-2">Subscribe Newsletter</h4>
+	              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit minima minus odio.</p>
+
+	              <form action="#" method="post">
+	                <div class="input-group mb-3">
+
+	                  <input type="text" class="form-control border-secondary text-dark bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2" id="searchinput">
+	                  <div class="input-group-append">
+	                    <button class="btn btn-primary text-light" type="button" id="button-addon2">Send</button>
+	                  </div>
+	                </div>
+	              </form>
+	            </div>
+	          </div>
+	          <div class="container-fluid">
+	          	<p class="text-center">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by<a href="https://www.facebook.com/onyourdoornepal/" target="_blank" > OYD</a></p>
+	          </div>
+	        </div>
+ 		</div>
+ 	</footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="javascript/jquery.js"></script>
+    <script type="text/javascript" src="javascript/script.js"></script>
+    <script type="text/javascript" src="javascript/parallax.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

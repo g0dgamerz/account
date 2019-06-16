@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+   <main role="main">
+         <section class="jumbotron text-center">
+            
+
+   <form action="" method="POST">
+        {% csrf_token %}
+         {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+         </section>
+      </main>
+
+{% endblock %}

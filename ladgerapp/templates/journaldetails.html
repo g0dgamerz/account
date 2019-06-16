@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block content%}
+        <div class="card-body container">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-3 text-center">
+              <p class="text-dark">Tinkune, Kathmandu, Nepal</p>
+              <p class="text-dark">+123 4567 890</p>
+            </div>
+          <div class="customername container">
+            <form>
+              <label >Accounholder name:</label>
+              <input type="text" value="{{ nam }}" >
+            </form>
+          </div>
+          <div class="col-10">
+           <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Particular</th>
+                  <th scope="col">Debit</th>
+                  <th scope="col">Credit</th>
+                  <th scope="col">Edit</th>
+                  <th scope="col">Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for item in tab %}
+                <tr>               
+                  <td>{{ item.date }}</td>
+                  <td>{{ item.Particulars }}</td>
+                  <td>{{ item.Debit }}</td>
+                  <td>{{ item.Credit }}</td>
+                  <td><a href="{% url 'edit' item.pk %}"><i class="fa fa-2x fa-fw fa-edit"></i></a></td>
+                  <td><a href="{% url 'delete' item.pk %}"><i class="fa fa-2x fa-fw fa-trash"></i></a></td>
+                </tr>
+               {% endfor %}
+                <tr>
+                  <td colspan="6">Total : </td>
+                </tr>
+                </form>
+              </tbody>
+            </table>
+            </div>
+            <div class="col-2">
+              <table class="table">
+                <thead class="thead-dark">
+                
+                  <tr>
+                    <th scope="col">Cr/Dr</th>
+                    <th scope="col">Balance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {% for i in list %}
+                  <tr>
+
+                            {% if i < 0 %}
+                                    <td>Cr</td>
+                            {% else %}
+                                 
+                                    <td>Dr</td>
+                            {% endif %}
+
+                    <td>{{ i }}</td>
+                  </tr>
+                 {% endfor %}
+                  
+                 
+                  </tr>
+                   
+                    <td colspan="2">0.0</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+            <a href="{% url 'add' %}"><button type="button" class="btn btn-primary center-block px-4">Add</button></a>
+        </div>
+{% endblock content%}

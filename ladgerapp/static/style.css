@@ -1,0 +1,101 @@
+.*{
+  margin: 0;
+  padding: 0;
+}
+body{  
+}
+.heading{
+	height: 20px;
+	background-color: #5c0931;
+}
+.navigationpart{
+	background-color: #5c0931;
+	height: 50px;
+}
+.menu_part{
+  background-color: red;
+}
+.footerpart{
+  border-top: 1px solid rgba(0,0,0,0.02);
+}
+.body-container{
+  height: auto;
+  min-height: 400px;
+}
+.linkfooter a{
+  color: black;
+}
+.linkfooter li a:hover{
+  text-decoration: none;
+  color: black;
+}
+#searchinput{
+  outline: none !important;
+}
+table input{
+  outline: none;
+  border:none;
+  background-color: #fff;
+  width: 100%;
+}
+table tr, td, th{
+  border: 1px solid rgba(0,0,0,0.1);
+  text-align: center;
+}
+.sumit{
+  outline: none;
+  align-content: center;
+}
+.preview-wrapper{
+  height: 500px;
+  width: 70%;
+  margin: 0px auto;
+}
+.customername{
+  position: absolute;
+  top: 220px;
+  left: 20px;
+  border: none;
+  outline: none;
+}
+.customername input{
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #999;
+}
+.panenumber{
+  position: absolute;
+  top: 3px;
+  left: 820px;
+}
+.panenumber input{
+  border: none;
+  outline: none;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #999;
+}
+.showdata input{
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #999
+}
+.copyright_footer p{
+  text-align: center;
+}
+.customername{
+  position: absolute;
+  top: 150px;
+  left: 130px;
+  border: none;
+  outline: none;
+}
+.customername input{
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #999;
+}
+.addaccount input{
+  border: 1px solid rgba(0,0,0,0.2);
+}
+
+

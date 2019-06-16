@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content%}
+	<div class="container body-container mt-5">
+      <h2 class="text-center my-5">Accounthead Namelist</h2>
+      <div class="dropdown show text-center">
+        <a class="btn  btn-primary  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Accountheader Namelist
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink ml-auto">
+          {% for name in account_data %}
+          <a class="dropdown-item" href="{% url 'journaldetails' name.account_name %}">{{ name.account_name }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+{% endblock content%}
